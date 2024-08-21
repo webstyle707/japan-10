@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>株式分析と予測</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <!-- <link rel="icon" href="./assets/icon.png"> -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="bg-[#63D5C3]">
+        <div class="">
+        </div>
+        <section class="pt-10">
+            <div class="w-full lg:max-w-[750px] mx-auto space-y-5">
+                <h1 class="text-center font-semibold xl:text-4xl lg:text-3xl md:text-2xl text-lg text-white">
+                    あなたの株は<span class="text-[#FF3131]">買う</span>べきか<span class="text-[#12FD06]">売る</span>べき?
+                </h1>
+
+                <div class="lg:h-[464px] md:h-[464px] h-[200px] w-full">
+                    <div class="diagnosis w-full bg-cover bg-center lg:w-[750px] lg:h-[464px] md:h-[464px] h-[200px]">
+                        <div class="diagnosis_box my-[50px] md:my-[139px] mx-auto md:w-[192px] md:h-[192px] w-[100px] h-[100px]">
+                          <p class="scanning w-[190px] h-[94px] -top-[94px"></p>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="space-y-8">
+                    <div class="text-white text-center space-y-2 md:space-y-3 pt-1 px-4">
+                        <h1 class=" lg:text-2xl md:text-xl">AI診断レポートを成功裏に受け取った人数、計 <span class="text-[#FFFF00]">10140</span> 人</h1>
+                        <h1 class=" lg:text-2xl md:text-xl text-red-600">データベースは <span class="text-[#FFFF00]">2024年8月19日15時 </span> に更新</h1>
+                        <h1 class="lg:text-lg">AIアルゴリズムのバージョンは <span class="text-[#FFFF00]">3.0.16</span>です</h1>
+                    </div>
+
+                    
+                    <div>
+                        <div class="flex justify-center items-center">
+                            <input type="text" class="focus:outline-none text-lg md:text-2xl text-gray-800 bg-white w-10/12 md:w-[482px] md:h-[96px] h-[60px] text-center px-16" placeholder="銘柄コード/会社名入力">
+                        </div>
+
+                        <div class="flex justify-center">
+                            <button onclick="showForm()" class="focus:outline-none text-[#d4ef36] relative w-10/12 md:w-[535px] md:h-[185px] h-[100px] scale-animation1">
+                                <img class="absolute w-full h-full" src="./assets/btn1.png" alt="">
+                                <div class="w-full h-full flex items-center sticky justify-center md:justify-end md:pr-12 tracking-wider md:text-[29px]">
+                                    AI予測報告を無料で受け取る
+                                </div>
+                            </button>
+                        </div>
+
+                        <div class="max-w-[695px] h-[500px] md:h-[890px] mx-auto bg-[url('./assets/3.png')] bg-no-repeat bg-cover flex justify-center items-center">
+                            <div class="flex flex-col space-y-3 md:items-center md:justify-center">
+                                <div class="w-full flex justify-center items-center">
+                                    <input type="text" class="md:text-2xl text-gray-800 border border-[#06BBFA] lg:rounded-xl md:rounded-lg rounded bg-white w-10/12 md:w-[398px] h-[70px] md:h-[80px] text-center px-16" placeholder="銘柄コード/会社名入力">
+                                </div>
+    
+                                <div class=" flex w-full justify-center">
+                                    <button onclick="showForm()" class="focus:outline-none text-white relative md:w-[425px] w-10/12 h-[80px] md:h-[102px] scale-animation1">
+                                        <img class="absolute w-full h-full" src="./assets/btn2.png" alt="">
+                                        <div class="w-full h-full flex items-center sticky justify-center tracking-wider md:text-[28px]">
+                                            AI予測報告を無料で受け取る
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- k -->
+                    <!-- start SLIDE1-->
+                    <div class="relative overflow-hidden max-w-[695px] mx-auto 2xl:h-[50vh] xl:h-[60vh] lg:h-[50vh] md:h-[40vh] h-[42vh] bg-[url('./assets/4.png')] bg-cover  bg-no-repeat lg:pt-[135px] xl:pt-36 md:pt-32 pt-24 xl:pb-8 md:pb-6 pb-8">
+                        <div class="w-full h-full overflow-hidden">
+                          <ul id="slider" class="w-full text-white md:text-sm text-xs xl:text-lg 2xl:text-[24px] px-5 space-y-2">
+                              <li class="xl:py-5 py-1 border-b border-gray-400"><span class="text-[#CC8000]">****101:</span>最初は疑っていましたが、1年で3割以上の利益を得ました...</li>
+                              <li class="xl:py-5 py-1 border-b border-gray-400"><span class="text-[#CC8000]">****315:</span>新銘柄の将来性も的中しやすい。分析能力に頼れるわ…</li>
+                              <li class="xl:py-5 py-1 border-b border-gray-400"><span class="text-[#CC8000]">****432:</span>このAIの予測はまちがうことない!信頼できる</li>
+                              <li class="xl:py-5 py-1 border-b border-gray-400"><span class="text-[#CC8000]">****722:</span>3069の株をチェックしてみたけど、かなり当たってる感じ…</li>
+                              <li class="xl:py-5 py-1 border-b border-gray-400"><span class="text-[#CC8000]">****912:</span>期待を裏切らない、おすすめしてくれた銘柄はやっぱり上昇…</li>
+                              <li class="xl:py-5 py-1 border-b border-gray-400"><span class="text-[#CC8000]">****673:</span>プロの機関は本当に個人投資家たちよりも上手です…</li>
+                              <li class="xl:py-5 py-1 border-b border-gray-400"><span class="text-[#CC8000]">****262:</span>株初心者の私にとってはとても役に立つ…</li>
+                              <li class="xl:py-5 py-1 border-b border-gray-400"><span class="text-[#CC8000]">****811:</span>的中率が高い、少し儲けた…</li>
+
+
+                              <li class="xl:py-5 py-1 border-b border-gray-400"><span class="text-[#CC8000]">****101:</span>最初は疑っていましたが、1年で3割以上の利益を得ました...</li>
+                              <li class="xl:py-5 py-1 border-b border-gray-400"><span class="text-[#CC8000]">****315:</span>新銘柄の将来性も的中しやすい。分析能力に頼れるわ…</li>
+                              <li class="xl:py-5 py-1 border-b border-gray-400"><span class="text-[#CC8000]">****432:</span>このAIの予測はまちがうことない!信頼できる</li>
+                              <li class="xl:py-5 py-1 border-b border-gray-400"><span class="text-[#CC8000]">****722:</span>3069の株をチェックしてみたけど、かなり当たってる感じ…</li>
+                              <li class="xl:py-5 py-1 border-b border-gray-400"><span class="text-[#CC8000]">****912:</span>期待を裏切らない、おすすめしてくれた銘柄はやっぱり上昇…</li>
+                              <li class="xl:py-5 py-1 border-b border-gray-400"><span class="text-[#CC8000]">****673:</span>プロの機関は本当に個人投資家たちよりも上手です…</li>
+                              <li class="xl:py-5 py-1 border-b border-gray-400"><span class="text-[#CC8000]">****262:</span>株初心者の私にとってはとても役に立つ…</li>
+                              <li class="xl:py-5 py-1 border-b border-gray-400"><span class="text-[#CC8000]">****811:</span>的中率が高い、少し儲けた…</li>
+                          </ul>
+                        </div>
+                    </div>
+
+                    <div class="md:space-y-6 lg:space-y-8 space-y-4">
+                        <div class="flex justify-center items-center">
+                            <input type="text" class="focus:outline-none text-base md:text-2xl text-gray-800 bg-white md:w-[482px] w-[280px] h-[50px] md:h-[96px] text-center px-16" placeholder="銘柄コード/会社名入力">
+                        </div>
+
+                        <div class="flex justify-center">
+                            <button onclick="showForm()" class="text-[#d4ef36] relative md:w-[482px] w-[280px] h-[50px] md:h-[96px] scale-animation1">
+                                <img class="absolute w-full h-full" src="./assets/btn3.png" alt="">
+                                <div class="w-full h-full flex items-center sticky justify-center xl:justify-end text-center xl:pr-12 tracking-wider xl:text-[29px] lg:text-[25px] md:text-[24px] text-[16px]">
+                                    AI予測報告を無料で受け取る
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- start SLIDE2 -->
+
+                    <div class="relative overflow-hidden max-w-[695px] mx-auto 2xl:h-[30vh] xl:h-[40vh] lg:h-[44vh] md:h-[40vh] h-[40vh] ">
+                        <div class="w-full overflow-hidden h-full">
+                            <ul id="slider1" class="w-full text-white xl:text-2xl lg:text-xl md:text-lg px-5 space-y-2 *:py-0.5 md:*:py-3">
+                                <li class=" flex items-cente space-x-3 md:space-x-5 lg:space-x-8">
+                                  <div>
+                                      <img src="/assets/user.png" alt="">
+                                  </div>
+                                  <div>
+                                      ***0438が<span class="text-[#EA0101]">三菱ＵＦＪ(8306)</span>分析予測を行いました
+                                  </div>
+                                </li>
+                      
+                                <li class=" flex items-cente space-x-3 md:space-x-5 lg:space-x-8">
+                                  <div>
+                                      <img src="/assets/user.png" alt="">
+                                  </div>
+                                  <div>
+                                      ***2150が<span class="text-[#EA0101]">アップル(AAPL)</span>分析予測を行いました
+                                  </div>
+                                </li>     
+                      
+                                <li class=" flex items-cente space-x-3 md:space-x-5 lg:space-x-8">
+                                  <div>
+                                      <img src="/assets/user.png" alt="">
+                                  </div>
+                                  <div>
+                                      ***3110が<span class="text-[#EA0101]"> 楽天Ｇ(4755)</span>分析予測を行いました
+                                  </div>
+                                </li>
+                                
+                                <li class=" flex items-cente space-x-3 md:space-x-5 lg:space-x-8">
+                                  <div>
+                                      <img src="/assets/user.png" alt="">
+                                  </div>
+                                  <div>
+                                      ***3597が<span class="text-[#EA0101]">グリー(3632)</span>分析予測を行いました
+                                  </div>
+                                </li>
+                  
+                                <li class=" flex items-cente space-x-3 md:space-x-5 lg:space-x-8">
+                                  <div>
+                                      <img src="/assets/user.png" alt="">
+                                  </div>
+                                  <div>
+                                      ***0050が<span class="text-[#EA0101]">ＮＴＴ(9432)</span>分析予測を行いました
+                                  </div>
+                                </li>
+                  
+                                <li class=" flex items-cente space-x-3 md:space-x-5 lg:space-x-8">
+                                  <div>
+                                      <img src="/assets/user.png" alt="">
+                                  </div>
+                                  <div>
+                                      ***6295が<span class="text-[#EA0101]">ソニーＧ(6758)</span>分析予測を行いました
+                                  </div>
+                                </li>
+                  
+                                <li class=" flex items-cente space-x-3 md:space-x-5 lg:space-x-8">
+                                  <div>
+                                      <img src="/assets/user.png" alt="">
+                                  </div>
+                                  <div>
+                                      ***0051が<span class="text-[#EA0101]">ソフトＢＧ(9984)</span>分析予測を行いました
+                                  </div>
+                                </li>
+                  
+                                <li class=" flex items-cente space-x-3 md:space-x-5 lg:space-x-8">
+                                  <div>
+                                      <img src="/assets/user.png" alt="">
+                                  </div>
+                                  <div>
+                                      ***0509が<span class="text-[#EA0101]">トヨタ(7203)</span>分析予測を行いました
+                                  </div>
+                                </li>
+                  
+                                <li class=" flex items-cente space-x-3 md:space-x-5 lg:space-x-8">
+                                  <div>
+                                      <img src="/assets/user.png" alt="">
+                                  </div>
+                                  <div>
+                                      ***3859が<span class="text-[#EA0101]">テスラ(TSLA)</span>分析予測を行いました
+                                  </div>
+                                </li>
+
+                                <li class=" flex items-cente space-x-3 md:space-x-5 lg:space-x-8">
+                                    <div>
+                                        <img src="/assets/user.png" alt="">
+                                    </div>
+                                    <div>
+                                        ***0438が<span class="text-[#EA0101]">三菱ＵＦＪ(8306)</span>分析予測を行いました
+                                    </div>
+                                  </li>
+                        
+                                  <li class=" flex items-cente space-x-3 md:space-x-5 lg:space-x-8">
+                                    <div>
+                                        <img src="/assets/user.png" alt="">
+                                    </div>
+                                    <div>
+                                        ***2150が<span class="text-[#EA0101]">アップル(AAPL)</span>分析予測を行いました
+                                    </div>
+                                  </li>     
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="max-w-[695px] mx-auto bg-[url('./assets/4.png')] bg-cover  bg-no-repeat md:pt-32 pt-24 pb-14">
+                        <div class="space-y-3">
+                            <h1 class="text-3xl text-center text-white">先着88名限定</h1>
+                            <div class="grid md:grid-cols-2 gap-4 md:px-8 px-5">
+                                <div>
+                                    <div class=" border-[#035FBF] border">
+                                        <div class="py-4 text-2xl text-center text-white bg-[#035FBF]">
+                                            <h1>毎日3銘柄の</h1>
+                                            <h1>おすすめを</h1>
+                                        </div>
+
+                                        <div class="flex justify-center items-center py-5">
+                                            <button onclick="showForm()" class="bg-[#F9EB0F] rounded-3xl py-3.5 px-5  text-2xl font-semibold text-gray-700 scale-animation1 ">
+                                                無料で受け取る
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <div class=" border-[#035FBF] border">
+                                        <div class="py-4  text-2xl text-center text-white bg-[#035FBF]">
+                                            <h1>アドバイザーから</h1>
+                                            <h1>3回銘柄診断無料</h1>
+                                        </div>
+
+                                        <div class="flex justify-center items-center py-5">
+                                            <button onclick="showForm()" class="bg-[#F9EB0F] rounded-3xl py-3.5 px-5  text-2xl font-semibold text-gray-700 scale-animation1 ">
+                                                無料で受け取る
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div>
+                                    <div class=" border-[#035FBF] border">
+                                        <div class="py-4  text-2xl text-center text-white bg-[#035FBF]">
+                                            <h1>専属アドバイザー</h1>
+                                            <h1>オンラインでの回答</h1>
+                                        </div>
+
+                                        <div class="flex justify-center items-center py-5">
+                                            <button onclick="showForm()" class="bg-[#F9EB0F] rounded-3xl py-3.5 px-5  text-2xl font-semibold text-gray-700 scale-animation1 ">
+                                                無料で受け取る
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div>
+                                    <div class=" border-[#035FBF] border">
+                                        <div class="py-4  text-2xl text-center text-white bg-[#035FBF]">
+                                            <h1>毎週1回</h1>
+                                            <h1>投資セミナー無料</h1>
+                                        </div>
+
+                                        <div class="flex justify-center items-center py-5">
+                                            <button onclick="showForm()" class="bg-[#F9EB0F] rounded-3xl py-3.5 px-5  text-2xl font-semibold text-gray-700 scale-animation1 ">
+                                                無料で受け取る
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=""></div>
+                </div>
+
+                <div id="footerbtn" class=" w-full sticky z-10 -bottom-full left-0">
+                    <div class="">
+                        <div class="banner md:h-[193px] md:py-5 py-5 px-4 md:px-11 space-y-5 w-full lg:max-w-[750px]" id="banner" style="display: block;">
+                            <h2 class="text-[#7C3922] font-semibold md:text-xl lg:text-2xl xl:text-3xl text-center">あなたの銘柄は上がるか下がる？</h2>
+                            <div class="bg-white md:h-[95px] h-[50px] flex items-center relative">
+                                <ion-icon name="search" class="absolute left-2 md:left-5 top-6/12 text-xl md:text-5xl text-gray-500"></ion-icon>
+                                <input type="text" placeholder="銘柄コード/会社名入力" class="text-xl md:text-2xl lg:text-3xl md:pl-20 pl-10 md:pr-10 pr-4 text-gray-600 focus:outline-none bg-white w-full h-full">
+                                <button
+                                 onclick="showForm()"
+                                 class="focus:outline-none select-none rounded-xl bg-[#62D5C2] md:text-2xl lg:text-3xl text-white font-semibold  h-full w-8/12 md:w-6/12"
+                                 >無料AI予測</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div id="firstform" style="display: none;" class="fixed bottom-0 h-screen w-full z-30 flex justify-center items-center bg-[#102825] bg-opacity-90 px-4 md:px-0">
+            <div class="w-[680px] relative">
+                <ion-icon onclick="hideForm()" name="close-outline" class="absolute top-2.5 right-2.5 bg-[#FF0000] w-[60px] h-[60px] rounded-full flex justify-center items-center text-white text-3xl z-50 cursor-pointer transition-all duration-300 hover:bg-red-900"></ion-icon>
+                <div class="absolute w-full h-full top-0 left-0">
+                    <img class="w-[680px] h-[450px] md:h-[540px]" src="./assets/bg-form.png" alt="">
+                </div>
+                <div class="w-full h-full sticky z-40 py-14 space-y-5">
+                    <div class=" space-y-5">
+                        <p class="text-[#773C13] text-center text-xl md:text-3xl lg:text-4xl">AI分析が完了<br>報告はLINEで送信されます</p>
+                        <div class="flex items-center justify-center">
+                            <button class="scale-animation2 text-sm md:text-2xl lg:text-3xl relative">
+                                <div class="flex  justify-center items-center">
+                                    <img class="md:w-auto w-11/12" src="./assets/btn4.png" alt="">
+                                </div>
+                                <div class="absolute w-full h-full flex flex-col justify-center text-start top-0 left-0 md:pl-32 md:pr-10 pl-24 pr-5  space-y-0.5 lg:pt-6">
+                                    <p class="text-[#FF0000]">
+                                        LINEともだち追加して
+                                    </p>
+                                    <p class="text-[#0B5A7F] font-semibold ">
+    
+                                        8月20日の分析レポートを無料で入手
+                                    </p>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class=" md:text-[22px] text-gray-600 md:space-y-2 space-y-1 md:pl-12 md:pr-32 pl-5 pr-5">
+                         <p>「<span class="codes"></span>」</p>
+                         <p>最新の内部情報が入手されました</p>
+                         <p id="message" style="color: red">LINEで友だち追加し、メッセージを送信すると、<strong>8月21日の予測</strong>レポートが取得できます。</p>
+                         <p class="text-base text-gray-600">(「レポート請求」とメッセージを送信してください)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
